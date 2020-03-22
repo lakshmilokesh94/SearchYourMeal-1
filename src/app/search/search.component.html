@@ -1,0 +1,19 @@
+<div>
+  <h1>Meal Search App</h1>
+  <input
+    name="text"
+    type="text"
+    placeholder="Search"
+    [(ngModel)]="state.searchValue"
+  />
+</div>
+<span>
+  <button (click)="handleSearch()">Search</button>
+  <button (click)="handleRandom()">Random</button>
+</span>
+
+<div *ngFor="let meal of state.meals">
+  <h1>{{meal.strMeal}}</h1>
+  <h2>{{meal.strArea}}</h2>
+  <img [src]="meal.strMealThumb" alt="meal-thumbnail" />
+</div>
